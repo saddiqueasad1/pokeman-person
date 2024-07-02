@@ -1,14 +1,25 @@
 # Pokemon Go Style Venue Finder
 
+-   [Pokemon Go Style Venue Finder](#pokemon-go-style-venue-finder)
+    -   [Overview](#overview)
+    -   [Project Description](#project-description)
+    -   [Screens and Requirements](#screens-and-requirements)
+        -   [Screen 1: Initial Map View](#screen-1-initial-map-view)
+            -   [Requirements:](#requirements)
+        -   [Screen 2: House/Event Details](#screen-2-houseevent-details)
+            -   [Requirements:](#requirements-1)
+    -   [Technical Details](#technical-details)
+    -   [Submission Details](#submission-details)
+
 ## Overview
 
-We are creating an innovative application where users can explore and discover special "Pokemon Go" houses/Events in a fictional world. Users need to find houses with the highest concentration of Pokemons. Our goal is to implement this design and functionality using a React Native project with Expo and Google Map or Mapbox.
+We are creating an innovative application where users can explore and discover special "Pokemon Go" houses/Events in a fictional world. Users need to find houses with the highest concentration of Pokemons. Our goal is to implement this design and functionality using a React Native project with Expo and Google Map.
 
-## Project Details
+## Project Description
 
 1. **Map Component**:
 
-    - We will use styled Google Map or MapBox maps to display our target houses.
+    - We will use styled Google Map maps to display our target houses.
     - The map component will have two main elements: users and house (represented as Pokemon Go houses).
 
 2. **Users**:
@@ -38,7 +49,7 @@ We are creating an innovative application where users can explore and discover s
 #### Requirements:
 
 1. **Map Display**:
-    - Integrate Google Map or MapBox with React Native and Expo(Expo Go 51).
+    - Integrate Google Map with React Native and Expo(Expo Go 51).
     - Display a styled map (`mapStyles.js`) with user and event (house) markers.
 2. **User Markers**:
     - Display user markers on the map with live coordinates.
@@ -49,68 +60,46 @@ We are creating an innovative application where users can explore and discover s
 4. **Interaction**:
     - Tapping on a event's pin navigates to the events info page.
 
-### Screen 2: Map After Few Minutes
+### Screen 2: House/Event Details
 
-![Map After Few Minutes](./assets/2.png)
+> Please note that all interactions should occur on a single screen with layers on top of the map. When a user clicks on an event marker, the event details and user avatars should be displayed directly on the map, as shown in the design.
 
-### Screen 3: House/Event Details
+**Important Points to Remember:**
 
-![Event Details](./assets/3.png)
+-   **Event Markers Layer**: Event markers should always be displayed above user markers. This means that if there are many users at the same location as a Pokémon house/event, the event marker must remain on top.
+-   **Event Details Display**: Clicking on an event marker should display the event's details and user avatars directly on the map, not in a modal. Ensure this matches the design exactly.
+
+![Event Details](./assets/2.png)
 
 #### Requirements:
 
 1. **Event Information**:
     - Display detailed event/house information when an event marker is tapped.
     - Include event name, date, time, remaining time, and the number of attendees.
-    - Display up to 6 users avatar attending attending to that house.
+    - Display up to 6 users's avatar attending attending to that house.
 2. **Shadow and Attendance**:
     - Event markers should dynamically update shadow size based on the number of attendees.
     - Ensure the "Users Count Presented" parameter updates as users move closer to the event.
 
 ## Technical Details
 
--   **Framework**: React Native with Expo (version 5.80)
--   **Mapping Library**: MapBox
+-   **Framework**: React Native with Expo and Expo Go 51
+-   **Mapping Library**: Google Map
 -   **Components**:
     -   Users: Interactive elements with live coordinates and event-specific shadows.
     -   Events: Static elements with unique colors and shadow sizes based on attendance.
 
-## Instructions for Freelancers
+## Submission Details
 
-1. **Clone the Repository**:
+Please raise your PR according the following checklist and update this checklist in your PR description:
 
-    ```sh
-    git clone https://github.com/JeffShomali/pokeman-person
-    cd pokeman-person
-    ```
+-   [ ] I followed the above information and implemented the required screens and functionalities.
+-   [ ] All Design is 100% matched with the provided images.
+-   [ ] I tested different scenarios to ensure the app functions correctly.
+-   [ ] I have implemented the shadow and border styles for users based on the backend response.
+-   [ ] I have implemented the users, and event's layers correctly.
 
-2. **Install Dependencies**:
+Thank you for contributing to our project. Your work is crucial in bringing this innovative application to life. If you have any questions or need further clarification, feel free to reach out. Please email the [mohsensalemzadeh@gmail.com](mohsensalemzadeh@gmail.com) and let me know you have finished this task.
 
-    ```sh
-    npm install
-    ```
-
-3. **Run the Project**:
-
-    ```sh
-    npm start
-    ```
-
-4. **Implement the Requirements**:
-
-    - Follow the notes provided for each screen to implement the required features.
-    - Ensure that live updates and dynamic styles are correctly implemented as per the project requirements.
-
-5. **Testing**:
-
-    - Thoroughly test the app for all features and ensure that all functionalities work as expected.
-    - Report any issues or suggestions for improvement.
-
-6. **Submit Your Work**:
-    - Create a pull request with your changes and detailed documentation of what you have implemented.
-
-## Conclusion
-
-Thank you for contributing to our project. Your work is crucial in bringing this innovative application to life. If you have any questions or need further clarification, feel free to reach out.
-
----
+Thanks
+Mohsen
