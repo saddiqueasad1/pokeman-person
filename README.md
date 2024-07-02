@@ -49,16 +49,20 @@ We are creating an innovative application where users can explore and discover s
 #### Requirements:
 
 1. **Map Display**:
+
     - Integrate Google Map with React Native and Expo(Expo Go 51).
-    - Display a styled map (`mapStyles.js`) with user and event (house) markers.
-2. **User Markers**:
+    - Display a styled map `mapStyle.js` with user and event (house) markers.
+    - Events/Houses should be in a different layer than Users layer. And Event/ Houses always need to be drawn above users layer
+
+1. **User Markers**:
     - Display user markers on the map with live coordinates.
     - Users should have no shadow in their default state.
-3. **Event Markers**:
+1. **Event Markers**:
     - Display event markers (houses) with unique randomized colors.
     - Event shadow size should correlate with the event's current attendance.
-4. **Interaction**:
-    - Tapping on a event's pin navigates to the events info page.
+1. **Interaction**:
+    - Tapping on a event's pin navigates to the House/Event detail screen (see below).
+    - Tapping on a user's pin navigates to the user info page.
 
 ### Screen 2: House/Event Details
 
@@ -67,16 +71,18 @@ We are creating an innovative application where users can explore and discover s
 **Important Points to Remember:**
 
 -   **Event Markers Layer**: Event markers should always be displayed above user markers. This means that if there are many users at the same location as a Pokémon house/event, the event marker must remain on top.
--   **Event Details Display**: Clicking on an event marker should display the event's details and user avatars directly on the map, not in a modal. Ensure this matches the design exactly.
+-   **Event Details Display:** Clicking on an event marker should hide all the points and events on the map and zoom into events coordination and display the event's details and user avatars directly on the map, not in a modal. Ensure this matches the design exactly.
 
 ![Event Details](./assets/2.png)
 
 #### Requirements:
 
 1. **Event Information**:
+
     - Display detailed event/house information when an event marker is tapped.
-    - Include event name, date, time, remaining time, and the number of attendees.
+    - Include event name, and the number of attendees.
     - Display up to 6 users's avatar attending attending to that house.
+
 2. **Shadow and Attendance**:
     - Event markers should dynamically update shadow size based on the number of attendees.
     - Ensure the "Users Count Presented" parameter updates as users move closer to the event.
