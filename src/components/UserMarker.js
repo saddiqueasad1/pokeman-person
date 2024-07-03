@@ -2,13 +2,14 @@ import React from "react";
 import { Marker } from "react-native-maps";
 import { View, Text } from "react-native";
 import { Avatar } from "react-native-elements";
+import DiamondImage from "./DiamondImage";
 
 const UserMarker = ({ user }) => {
   return (
     <Marker coordinate={{ latitude: user.latitude, longitude: user.longitude }}>
       <View style={{ alignItems: "center" }}>
-        <Avatar
-          rounded
+        {/* <Avatar
+          rounded = {false}
           source={{ uri: user.image }}
           size="medium"
           containerStyle={{
@@ -16,8 +17,8 @@ const UserMarker = ({ user }) => {
             borderColor: "#fff",
             marginBottom: 5,
           }}
-        />
-        <Text style={{ color: "#fff", fontSize: 10 }}>{user.name}</Text>
+        /> */}
+        <DiamondImage uri={user.image}/>
       </View>
     </Marker>
   );
