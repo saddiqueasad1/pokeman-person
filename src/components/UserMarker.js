@@ -1,22 +1,23 @@
-import React from 'react';
-import { Marker } from 'react-native-maps';
-import { View, Text } from 'react-native';
-import { Avatar } from 'react-native-elements';
+import React from "react";
+import { Marker } from "react-native-maps";
+import { View, Text } from "react-native";
+import { Avatar } from "react-native-elements";
 
-const UserMarker = ({ user, index }) => {
-    const ind = index *  0.5
-    const latitude = parseFloat(user.latitude+ind)
-    console.log("latitude", latitude);
+const UserMarker = ({ user }) => {
   return (
     <Marker coordinate={{ latitude: user.latitude, longitude: user.longitude }}>
-      <View style={{ alignItems: 'center' }}>
+      <View style={{ alignItems: "center" }}>
         <Avatar
           rounded
           source={{ uri: user.image }}
           size="medium"
-          containerStyle={{ borderWidth: 3, borderColor: '#fff', marginBottom: 5 }}
+          containerStyle={{
+            borderWidth: 3,
+            borderColor: "#fff",
+            marginBottom: 5,
+          }}
         />
-        <Text style={{ color: '#fff', fontSize: 10 }}>{user.name}</Text>
+        <Text style={{ color: "#fff", fontSize: 10 }}>{user.name}</Text>
       </View>
     </Marker>
   );

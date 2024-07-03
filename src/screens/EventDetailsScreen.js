@@ -1,11 +1,23 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet, Image } from "react-native";
+import MapView from "react-native-maps";
 
 const EventDetailsScreen = ({ route }) => {
   const { event } = route.params;
+  const tokyoRegion = {
+    latitude: 35.6762,
+    longitude: 139.6503,
+    latitudeDelta: 0.01,
+    longitudeDelta: 0.01,
+  };
 
   return (
     <View style={styles.container}>
+      <MapView
+        style={styles.map}
+        initialRegion={tokyoRegion}
+        userInterfaceStyle="dark"
+      ></MapView>
       <Image source={{ uri: event.image }} style={styles.image} />
       <Text style={styles.title}>{event.name}</Text>
       <Text>Attendees: {event.pokemon_present}</Text>
@@ -16,8 +28,8 @@ const EventDetailsScreen = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   image: {
     width: 100,
@@ -26,7 +38,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
+  },
+  map: {
+    ...StyleSheet.absoluteFillObject,
   },
 });
 

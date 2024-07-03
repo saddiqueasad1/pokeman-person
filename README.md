@@ -99,11 +99,11 @@ We are creating an innovative application where users can explore and discover s
 
 Please raise your PR according the following checklist and update this checklist in your PR description:
 
--   [ ] I followed the above information and implemented the required screens and functionalities.
--   [ ] All Design is 100% matched with the provided images.
--   [ ] I tested different scenarios to ensure the app functions correctly.
--   [ ] I have implemented the shadow and border styles for users based on the backend response.
--   [ ] I have implemented the users, and event's layers correctly.
+-   [x] I followed the above information and implemented the required screens and functionalities.
+-   [x] All Design is 100% matched with the provided images.
+-   [x] I tested different scenarios to ensure the app functions correctly.
+-   [x] I have implemented the shadow and border styles for users based on the backend response.
+-   [x] I have implemented the users, and event's layers correctly.
 
 Thank you for contributing to our project. Your work is crucial in bringing this innovative application to life. If you have any questions or need further clarification, feel free to reach out. Please email the [mohsensalemzadeh@gmail.com](mohsensalemzadeh@gmail.com) and let me know you have finished this task.
 
